@@ -2,7 +2,7 @@
 <template>
     <div id="bodyFour">
         <header>
-            <img src="/public/images/HeaderExp.svg" alt="img Experiences" id="realImg">
+            <img :src="handleImages('/src/assets/images/HeaderExp.svg')" alt="img Experiences" id="realImg">
         </header>
         <section>
             <div id="alignSection">
@@ -22,37 +22,38 @@
                 </ul>
                 <ButtonGradient title="Show more"/>
             </div>
-            <img src="/public/images/Paws.svg" alt="Paws" id="paws">
+            <img :src="handleImages('/src/assets/images/Paws.svg')" alt="Paws" id="paws">
         </section>
     </div>
 </template>
     
 <script setup>
+import { handleImages } from '@/utils';
 import { ref } from 'vue';
 import ButtonGradient from './ButtonGradient.vue';
 
 const comments = ref([
    {
-      picture: '/public/images/People1.svg',
-      stars: '/public/images/StarPeople1.svg',
+      picture: 'src/assets/images/People1.svg',
+      stars: 'src/assets/images/StarPeople1.svg',
       name: 'Wade Warren',
       comment: "The quality of this dog clothing is incredible. It's comfortable and durable, ensuring your pet stays stylish and cozy!"
    },
    {
-      picture: '/public/images/People2.svg',
-      stars: '/public/images/StarPeople2.svg',
+      picture: 'src/assets/images/People2.svg',
+      stars: 'src/assets/images/StarPeople2.svg',
       name: 'Elias Watsica',
       comment: "I'm impressed with the perfect fit and softness of this product – my dog loves wearing it and looks super stylish!"
    },
    {
-      picture: '/public/images/People3.svg',
-      stars: '/public/images/StarPeople3.svg',
+      picture: 'src/assets/images/People3.svg',
+      stars: 'src/assets/images/StarPeople3.svg',
       name: 'Theresa Conroy',
       comment: "This dog apparel combines style and functionality perfectly, providing both comfort and charm!"
    },
    {
-      picture: '/public/images/People4.svg',
-      stars: '/public/images/StarPeople4.svg',
+      picture: 'src/assets/images/People4.svg',
+      stars: 'src/assets/images/StarPeople4.svg',
       name: 'Nicole Champlin',
       comment: "The outfit is so well-made and comfortable that my dog doesn't want to take it off – definitely an excellent purchase!"
    }

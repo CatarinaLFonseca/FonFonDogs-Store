@@ -12,8 +12,8 @@
         <div id="socialMidia">
             <h2 class="gradient">Follow on social</h2>
             <div class="imgGrid">
-                <img src="/public/images/IconInsta.svg" alt="icon insta">
-                <img src="/public/images/IconFace.svg" alt="icon face">
+                <img src="@/assets/images/IconInsta.svg" alt="icon insta">
+                <img src="@/assets/images/IconFace.svg" alt="icon face">
             </div>
         </div>
     </div>

@@ -1,7 +1,7 @@
 <template>
   <div id="bodyTwo">
     <header>
-      <img src="/public/images/HeaderStore.svg" alt="OurStore" id="OurStore">
+      <img :src="handleImages('/src/assets/images/HeaderStore.svg')" alt="OurStore" id="OurStore">
     </header>
     <section>
       <div class="circle">
@@ -14,8 +14,8 @@
         <ul>
           <li class="modelsGrid" v-for="(model, index) in modelOfDogs" :key="index">
             <div class="gridPicture">
-              <img :src="model.picture" alt="picture dog" id="picture">
-              <img :src="model.stars" alt="stars picture" id="stars">
+              <img :src="handleImages(`/src/assets/images/${model.picture}`)" alt="picture dog" id="picture">
+              <img :src="handleImages(`/src/assets/images/${model.stars}`)" alt="stars picture" id="stars">
             </div>
               <h2>{{ model.description }}</h2>
               <p>{{ model.price }}</p>
@@ -30,34 +30,34 @@
 <script setup>
 import { ref } from 'vue';
 import ButtonGradient from './ButtonGradient.vue';
+import { handleImages } from '@/utils';
 
 const modelOfDogs = ref([
    {
-      picture: '/public/images/Yellow-dog.svg',
-      stars: '/public/images/Rating.svg',
+      picture: 'Yellow-dog.svg',
+      stars: 'Rating.svg',
       description: 'Yellow sweatshirt',
       price: '$85,00'
    },
    {
-      picture: '/public/images/Red-dog.svg',
-      stars: '/public/images/Rating.svg',
+      picture: 'Red-dog.svg',
+      stars: 'Rating.svg',
       description: 'Red sweatshirt',
       price: '$85,00'
    },
    {
-      picture: '/public/images/Blue-dog.svg',
-      stars: '/public/images/Rating-gold.svg',
+      picture: 'Blue-dog.svg',
+      stars: 'Rating-gold.svg',
       description: 'Blue casual shirt',
       price: '$85,00'
    },
    {
-      picture: '/public/images/Black-dog.svg',
-      stars: '/public/images/Rating.svg',
+      picture: 'Black-dog.svg',
+      stars: 'Rating.svg',
       description: 'Printed sweatshirt',
       price: '$85,00'
    }
 ]);
-
 </script>
 
 <style scoped>

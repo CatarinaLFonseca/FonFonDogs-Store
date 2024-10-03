@@ -1,7 +1,7 @@
 <template>
     <div id="bodyOne">
         <header>
-            <img src="/public/images/Logo.svg" alt="logo" id="logo">
+            <img :src="handleImages('/src/assets/images/Logo.svg')" alt="logo" id="logo">
             <nav>
                 <a href="">Home</a>
                 <a href="">About</a>
@@ -22,7 +22,7 @@
             </div>
         </section>
         <div class="imgRight">
-            <img src="/public/images/image-right.svg" alt="Group Dogs" id="groupDogs">
+            <img :src="handleImages('/src/assets/images/image-right.svg')" alt="Group Dogs" id="groupDogs">
         </div>  
     </div>
 </template>
@@ -30,6 +30,7 @@
 <script setup>
 import ButtonGradient from './ButtonGradient.vue';
 import ButtonLink from './ButtonLink.vue';
+import { handleImages } from '@/utils';
 </script>
 
 <style scoped>

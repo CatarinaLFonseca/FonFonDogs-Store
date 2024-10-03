@@ -12,11 +12,11 @@
             </div>
         </section>
         <div id="imgCircle">
-            <img src="/public/images/Blue-circle-one.svg" alt="first circle" id="firstCircle">
-            <img src="/public/images/Blue-circle-two.svg" alt="second circle" id="secondCircle">
-            <img src="/public/images/Blue-circle-three.svg" alt="third circle" id="thirdCircle">
-            <img src="/public/images/Yellow-circle-one.svg" alt="fourth circle" id="fourthCircle">
-            <img src="/public/images/Yellow-circle-two.svg" alt="fifth circle" id="fifthCircle">
+            <img :src="handleImages('/src/assets/images/Blue-circle-one.svg')" alt="first circle" id="firstCircle">
+            <img :src="handleImages('/src/assets/images/Blue-circle-two.svg')" alt="second circle" id="secondCircle">
+            <img :src="handleImages('/src/assets/images/Blue-circle-three.svg')" alt="third circle" id="thirdCircle">
+            <img :src="handleImages('/src/assets/images/Yellow-circle-one.svg')" alt="fourth circle" id="fourthCircle">
+            <img :src="handleImages('/src/assets/images/Yellow-circle-two.svg')" alt="fifth circle" id="fifthCircle">
         </div>
     </div>
 </template>
@@ -24,6 +24,7 @@
 <script setup>
     import ButtonGradient from './ButtonGradient.vue';
     import ButtonLink from './ButtonLink.vue'
+    import { handleImages } from '@/utils';
 </script>
     
 <style scoped>
