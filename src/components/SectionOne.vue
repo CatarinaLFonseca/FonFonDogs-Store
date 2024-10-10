@@ -1,29 +1,35 @@
 <template>
     <div id="bodyOne">
         <header>
-            <img :src="handleImages('/src/assets/images/Logo.svg')" alt="logo" id="logo">
+            <div class="content-logo">
+                <img :src="handleImages('/src/assets/images/Logo.svg')" alt="logo">
+            </div>
             <nav>
                 <a href="">Home</a>
                 <a href="">About</a>
                 <a href="">Service</a>
                 <a href="">Shop</a>
-                <a href="" id="contact">Contact us</a>
+                <a href="">Contact us</a>
             </nav>
         </header>
+
         <section>
-            <div class="sectionAlign">
-                <h2 class="gradient">Welcome..</h2>
-                <h1>Style and comfort for your pet: where <span class="gradient">fashion meets love!</span></h1>
-                <p>Discover our collection of exclusive clothing that combines comfort, elegance and lots of love for your best friend.</p>
-                <div class="buttons">
-                    <button-gradient title="Our Services" />
-                    <button-link />
+            <div class="sectionLeft">
+                <div class="sectionLeftContent">
+                    <h2 class="gradient">Welcome..</h2>
+                    <h1>Style and comfort for your pet: where <span class="gradient">fashion meets love!</span></h1>
+                    <p>Discover our collection of exclusive clothing that combines comfort, elegance and lots of love for your best friend.</p>
+                    <div class="buttons">
+                        <button-gradient title="Our Services" />
+                        <button-link />
+                    </div>
                 </div>
             </div>
+
+            <div class="sectionRight">
+                <img :src="handleImages('/src/assets/images/image-right.svg')" alt="Group Dogs">
+            </div>
         </section>
-        <div class="imgRight">
-            <img :src="handleImages('/src/assets/images/image-right.svg')" alt="Group Dogs" id="groupDogs">
-        </div>  
     </div>
 </template>
 
@@ -36,89 +42,90 @@ import { handleImages } from '@/utils';
 <style scoped>
 
 #bodyOne {
+    border-radius: 0px 0px 10px 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
     background-image: 
     radial-gradient(circle 300px at 5% top, #ff506425, #ff526c13, transparent),
     radial-gradient(circle 280px at 20%, #ff990015, #ff526c09, transparent),
     radial-gradient(circle 330px at 11% bottom, #9cff5010, #ff526c09, transparent),
     linear-gradient(45deg, #040006 29%,  #62005F);
-    height: 100vh;
-    border-radius: 0px 0px 10px 10px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.imgRight {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-}
-
-#groupDogs {
-    display: flex; 
-    position: absolute;
-    width: 980px;
-}
-
-#logo {
-    position: absolute;
-    left: 5%;
-    top: 1%;
 }
 
 header {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
+    height: 100px;
+}
+
+.content-logo {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.content-logo img {
+    width: 300px;
 }
 
 nav {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     width: 100%;
-    justify-content: flex-end;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
 }
 
 a {
-    display: flex;
     color: #ffff;
     text-decoration: none;
     font-size: 16px;
     font-family: "Inter", Regular;
-    padding-right: 10%;
-    padding-top: 2%;
-}
-
-#contact {
-    margin-left: 3%;
-    padding-right: 5%;
 }
 
 section {
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    height: 100%;
+    padding-top: 75px;
 }
 
-.sectionAlign {
+.sectionLeft {
     display: flex;
     flex-direction: column;
-    margin-right: 55%;
-    width: 516px;
-    height: 375px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 65px;
+}
+
+.sectionLeftContent {
+    display: flex;
+    flex-direction: column;
+    max-width: 512px;
+    gap: 15px
+}
+
+.sectionRight {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.sectionRight img {
+    width: 100%;
+    height: 100%;
 }
 
 h2 {
     font-family: "Inter", SemiBold;
     font-weight: 800;
     font-size: 19px;
-    width: 102px;
-    height: 28px;
-    margin-bottom: 28px;
-
+    margin-bottom: 10px;
 }
 
 h1 {
@@ -127,9 +134,6 @@ h1 {
     font-weight: 300;
     font-size: 55px;
     color: #ffff;
-    width: 516px;
-    height: 199px;
-    margin-bottom: 4px;
 }
 
 p {
@@ -138,9 +142,6 @@ p {
     font-weight: 300;
     font-size: 17px;
     color: #999999;
-    width: 496px;
-    height: 56px;
-    margin-bottom: 3px;
 }
 
 .gradient {
@@ -155,163 +156,89 @@ p {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: auto;
-    margin-right: 41%;
-    width: 304px;
-    height: 48px;
+    margin-top: 20px;
 }
 
+
 @media screen and (max-width: 1930px) {
-    #logo {
-        width: 265px;
-    }
-    #groupDogs {
-        width: 870px;
-    }
     a {
         font-size: 14px;
     }
-    .sectionAlign {
-        margin-right: 50%;
-    }
+ 
     h2 {
         font-size: 17px;
     }
+    
     h1 {
         font-size: 50px;
     }
+
     p {
         font-size: 15px;
     }
 }
+
 @media screen and (max-width: 1370px) {
-    #logo {
-        width: 230px;
+    .sectionLeft {
+        margin-top: 0px;
     }
-    #groupDogs {
-        width: 635px;
-    }
-    a {
-        font-size: 12px;
-    }
-    #contact {
-        margin-left: 3%;
-    }
-    .sectionAlign {
-        height: 315px;
+    .sectionLeftContent {
+        padding-left: 0px;
     }
     h2 {
         font-size: 16px;
-        margin-bottom: 25px;
     }
     h1 {
         font-size: 38px;
-        width: 485px;
-        height: 130px;
-        margin-bottom: 15px;
-    }
-    p {
-        font-size: 13px;
-        width: 465px;
     }
 }
+
 @media screen and (max-width: 1250px) {
+    section {
+        padding: 25px;
+    }
+
+    .sectionRight {
+        display: none;
+    }
+
     #bodyOne {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
-    #logo {
-        width: 220px;
-        left: 1%;
-    }
-    #groupDogs {
-        display: none
-    }
-    a {
-        font-size: 14px;
-        padding-right: 8%;
-        padding-top: 2.88%;
-    }
-    .sectionAlign {
-        margin: auto;
-    }
-    p {
-        font-size: 15px;
-        margin-bottom: 25px;
-
-    }
-
-    .buttons {
-        margin: auto;
-        width: 516px;
-    }
 }
-@media screen and (max-width: 880px) {
-    #logo {
-        width: 220px;
-        left: 1%;
-    }
-    #groupDogs {
-        display: none
-    }
-    a {
-        padding-right: 6%;
-        padding-top: 4%;
-    }
-    #contact {
-        padding-right: 3%;
-    }
-    .sectionAlign {
-        margin: auto;
-    }
-}
+
 @media screen and (max-width: 700px) {
-    header {
-        flex-direction: column-reverse;
-    }
-    #logo {
-        position: unset;
-        width: 200px;
-        margin-top: 5%;
-    }
-    #groupDogs {
-        display: none
-    }
-    nav {
+    .content-logo {
+        width: 100%;
+        display: flex;
         justify-content: center;
+        margin-top: 20px;
     }
-
+    
+    .content-logo img {
+        width: 250px;
+    }
+    
+    nav {
+        display: none;
+    }
+    
     a {
         font-size: 12px;
     }
-    #contact {
-        padding-right: 0%;
-        margin-left: 0%;
-    }
-    .sectionAlign {
-        justify-content: center;
-        margin: auto;
-        width: 300px;
-        height: 200px;
-    }
+
     h2 {
         font-size: 19px;
     }
 
     h1 {
         font-size: 40px;
-        height: 140px;
-        width: 325px;
     }
 
     p {
         font-size: 12px;
-        width: 300px;
-        
-    }
-    .buttons {
-        width: 280px;
     }
 }
 </style>
