@@ -63,7 +63,7 @@ const comments = ref([
 <style scoped>
     #bodyFour {
         background: linear-gradient(to bottom, #FFCCFC 40%, #FFF5FF);
-        height: 100vh;
+        min-height: 100dvh; 
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -77,7 +77,7 @@ const comments = ref([
     }
     
     section {
-        height: 100%;
+        min-height: 100%;
         display: flex;
         align-items: center;
         flex-direction: column;

@@ -30,18 +30,18 @@
 <style scoped>
     #bodyThree {
         background: linear-gradient(to bottom, #fff5fff2 15%, #FFCCFC);
-        height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: center;        
+        justify-content: center;
+        min-height: 100dvh;        
     }
 
     section {
+        min-height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         margin-left: 10%;
-        height: 50%;
     }
 
     #sectionAlign {
@@ -182,7 +182,6 @@
         flex-direction: column;
         margin-left: 0%;
         margin: auto;
-        height: 0%; 
         align-items: center;
         justify-content: center;
     }

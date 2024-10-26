@@ -22,8 +22,9 @@
 <style scoped>
     #bodyFooter {
         background-image: linear-gradient(360deg, #040006 -30%, #62005F);
-        height: 8vh;
+        height: 80px;
         position: relative;
+        bottom: 0;
         display: flex;
         flex-direction: row;
         justify-content: space-between;

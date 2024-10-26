@@ -64,11 +64,14 @@ const modelOfDogs = ref([
 
 #bodyTwo {
   background-color: #fff5fff2;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100dvh;
+}
 
+section {
+  min-height: 100%
 }
 
 header {
@@ -121,6 +124,7 @@ header {
   flex-direction: column;
   align-items: center;
   position: relative;
+  height: 100%;
 }
 
 h1 {
