@@ -4,13 +4,6 @@
       <img :src="'/images/HeaderStore.svg'" alt="OurStore" id="OurStore">
     </header>
     <section>
-      <!--
-            <div class="circle">
-        <div class="circle1"></div>
-        <div class="circle2"></div>
-        <div class="circle3"></div>
-      </div>
-      -->
       <div id="gridSection">
         <h1>
           <span class="gradient">Best</span> Seller
@@ -29,6 +22,9 @@
         <ButtonGradient title="Show more"/>
       </div>
     </section>
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+    <div class="circle3"></div>
   </div>
 </template>
 
@@ -72,6 +68,7 @@ const modelOfDogs = ref([
   flex-direction: column;
   align-items: center;
   min-height: 100dvh;
+  position: relative;
 }
 
 section {
@@ -85,10 +82,6 @@ header {
   align-self: center;
 }
 
-.circle {
-  position: absolute;
-}
-
 .circle1 {
   width: 268px;
   height: 268px;
@@ -97,8 +90,8 @@ header {
   border: 1px solid #33ff0029;
   box-shadow: 0 0 10px #1b850140;
   position: absolute;
-  bottom: -150px;
-  right: -70px;
+  top: 160px;
+  left: 260px;
 }
 
 .circle2 {
@@ -109,8 +102,8 @@ header {
   box-shadow: 0 0 10px #4301418c;
   background-color: #62005f54;
   position: absolute;
-  top: 95px;
-  left: 840px;
+  top: 383px;
+  right: 165px;
 }
 
 .circle3 {
@@ -122,8 +115,8 @@ header {
   box-shadow: 0 0 10px #ff42658f;
 
   position: absolute;
-  top: 565px;
-  left: 283px;
+  bottom: 0;
+  left: 650px;
 }
 
 #gridSection {
@@ -201,43 +194,31 @@ p {
   font-size: 15px;
 }
 
-@media screen and (max-width: 1440px) {
-  .circle1 {
-    bottom: -214px;
-    right: -127px;
-  }
-}
-
-
-@media screen and (max-width: 1370px) {
-  .circle1 {
-    width: 258px;
-    height: 258px;
-    right: -163px;
+@media screen and (max-width: 1700px) {
+  .circle2 {
+    right: 100px;
   }
   .circle3 {
-    display: none;
+    left: 200px;
   }
 }
+
+@media screen and (max-width: 1500px) {
+  .circle1 {
+    display: none;
+  }
+  .circle2 {
+    top: 250px;
+    right: 30px;
+  }
+}
+
+
 @media screen and (max-width: 1250px) {
   #OurStore {
     width: 480px;
   }
-  .circle1 {
-    width: 200px;
-    height: 200px;
-    bottom: -150px;
-    right: -200px;
-  }
-  .circle2 {
-    width: 150px;
-    height: 150px;
-    top: 95px;
-    left: 765px;
-  }
-  .circle3 {
-    top: 536px;
-  }
+
   h1 {
     font-size: 43px;
   }
@@ -256,21 +237,16 @@ p {
   #OurStore {
     width: 460px;
   }
-  .circle1 {
-    width: 170px;
-    height: 170px;
-    right: 60px;
-  }
+
   .circle2 {
-    left: 255px;
-    top: 110px;
-    width: 140px;
-    height: 140px;
+    width: 112px;
+    height: 112px;
   }
+
   .circle3 {
-    top: 575px;
-    left: 65px;
+    left: 100px;
   }
+
   h1 {
     font-size: 38px;
     width: 170px;
@@ -299,20 +275,13 @@ p {
   #OurStore {
     width: 360px;
   }
-  .circle1 {
-    position: unset;
-    width: 0px;
-    height: 0px;
-  }
   .circle2 {
-    left: 160px;
-    top: 55px;
-    width: 120px;
-    height: 120px;
+    top: 170px;
   }
+
   .circle3 {
-    top: 690px;
-    left: -95px;
+    bottom: -100px;
+    left: 30px;
   }
 }
 @media screen and (max-width: 400px) {

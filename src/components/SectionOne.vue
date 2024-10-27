@@ -194,8 +194,16 @@ p {
 }
 
 @media screen and (max-width: 1250px) {
+    #bodyOne {
+        min-height: 100dvh;
+    }
+
+
+
     section {
         padding: 25px;
+        flex-grow: 1;
+        align-items: center;
     }
 
     .sectionRight {
