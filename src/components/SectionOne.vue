@@ -2,7 +2,7 @@
     <div id="bodyOne">
         <header>
             <div class="content-logo">
-                <img :src="handleImages('/src/assets/images/Logo.svg')" alt="logo">
+                <img :src="new URL('/src/assets/images/Logo.svg', import.meta.url).href" alt="logo"> src\assets\images\Logo.svg
             </div>
             <nav>
                 <a href="">Home</a>
