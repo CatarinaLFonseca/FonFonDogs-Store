@@ -119,6 +119,7 @@ section {
 .sectionRight img {
     width: 100%;
     height: 100%;
+    border-bottom-right-radius: 10px;
 }
 
 h2 {

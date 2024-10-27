@@ -13,7 +13,7 @@
                     <div class="circle4"></div>
                 </div>
                 <ul>
-                    <li class="commentsGrid" v-for="(comment, index) in comments" :key="index">
+                    <li v-for="(comment, index) in comments" :key="index">
                         <img :src="comment.picture" alt="picture persona" id="picture" class="imgCard">
                         <img :src="comment.stars" alt="stars picture" class="imgCard">
                         <h1>{{ comment.name }}</h1>
@@ -82,44 +82,44 @@ const comments = ref([
         align-items: center;
         flex-direction: column;
         justify-content: space-around;
+        flex-grow: 2;
+        margin-bottom: 20px;
     }
 
     #alignSection {
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 50px;
     }
 
     ul {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        margin-bottom: 20px;
         position: relative;
         justify-items: center;
         align-items: center;
         justify-content: center;
+        gap: 50px;
     }
     
     li {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         text-decoration: none;
         width: 242px;
-        height: 365px;
-        margin: 46px;
+        height: 340px;
         background-color: #fff5ffdb;
         border-radius: 10px;
         border: 1px solid #af00a9;
         box-shadow: 1px 10px 10px 1px rgb(0 0 0 / 11%);
-    }
-
-    .imgCard {
-        margin: 9px 0px;
+        gap: 10px;
+        padding: 6px;
     }
 
     h1 {
-        margin: 9px 0px 18px 0px;
         font-family: "Inter", Medium;
         font-size: 24px;
         font-weight: 600;
@@ -128,8 +128,6 @@ const comments = ref([
     }
 
     p {
-        width: 231px;
-        height: 135px;
         font-family: "Inter", Regular;
         font-size: 18px;
         font-weight: 300;
@@ -213,39 +211,17 @@ const comments = ref([
     }
 }
 @media screen and (max-width: 1500px) {
-    #realImg {
-        width: 480px;
-    }
     .circle1 {
         right: 355px;
     }
     .circle2 {
         left: 175px;
     }
-    li {
-        margin: 36px;
-        width: 220px;
-        height: 355px;
-    }
-    .imgCard {
-      width: 70px;
-    }
-    h1 {
-        font-size: 20px;
-    }
-    p {
-        width: 150px;
-        height: 50px;
-        font-size: 14px;
-    }
     #paws {
         width: 110px;
     }
 }
 @media screen and (max-width: 1370px) {
-    #realImg {
-        width: 430px;
-    }
     .circle1 {
         display: none;
     }
@@ -261,28 +237,14 @@ const comments = ref([
     #alignSection {
         gap: 50px;
     }
-    ul {
-        margin-bottom: 3px;
-    }
-    li {
-        margin: 12px 18px;
-        width: 188px;
-        height: 270px;
-    }
-    .imgCard {
-     width: 65px;
-    }
-    h1 {
-        font-size: 18px;
-    }
-    p {
-        font-size: 12px;
-    }
     #paws {
         width: 87px;
     }
 }
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1250px) {
+    #realImg {
+        width: 480px;
+    }
     .circle3 {
         top: 275px;
         right: 190px;
@@ -291,13 +253,25 @@ const comments = ref([
         width: 85px;
     }
 }
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1180px) {
+    ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .circle3 {
+        top: 275px;
+        right: 190px;
+    }
+    #paws {
+        width: 85px;
+    }
+}
+
+@media screen and (max-width: 1045px) {
     #realImg {
-        width: 525px;
+        width: 460px;
     }
-    .imgCard {
-        width: 80px;
-    }
+}
+@media screen and (max-width: 990px) {
     .circle2 {
         width: 220px;
         height: 220px;
@@ -309,26 +283,11 @@ const comments = ref([
         right: 135px;
         top: 250px;
     }
-    h1 {
-        font-size: 17px;
-    }
-    p {
-        width: 150px;
-        height: 50px;
-        font-size: 12px;
-    }
-    .imgCard {
-        width: 60px;
-        margin: 5px 0px;
-    }
     #paws {
         width: 60px;
     }
 }
 @media screen and (max-width: 895px) {
-    #realImg {
-        width: 450px;
-    }
     .circle1 {
         right: -15px;
     }
@@ -344,26 +303,6 @@ const comments = ref([
     .circle4 {
         top: 520px;
     }
-    ul {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    h1 {
-        font-size: 17px;
-    }
-    p {
-        width: 150px;
-        height: 50px;
-        font-size: 12px;
-    }
-    li {
-        width: 180px;
-        height: 270px;
-        padding: 3px 0px;
-    }
-    .imgCard {
-        width: 60px;
-        margin: 5px 0px;
-    }
     .buttonOne {
         display: none;
     }
@@ -372,10 +311,30 @@ const comments = ref([
     }
     
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 695px) {
     #realImg {
-        width: 418px;
+        width: 360px;
     }
+}
+@media screen and (max-width: 650px) {
+    ul {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .imgCard {
+        width: 70px;
+    }
+
+    h1 {
+        font-size: 17px;
+    }
+    p {
+        font-size: 12px;
+    }
+    li {
+        width: 180px;
+    }
+
     .circle2 {
         width: 150px;
         height: 150px;
@@ -399,9 +358,6 @@ const comments = ref([
     }
 }
 @media screen and (max-width: 400px) {
-    #realImg {
-        width: 360px;
-    }
     .circle2 {
         display: none;
     }

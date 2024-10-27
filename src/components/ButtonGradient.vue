@@ -25,7 +25,6 @@ span {
     font-weight: 400;
     width: 159px;
     height: 48px;
-    margin-right: 16px;
     cursor: pointer;
 
 }

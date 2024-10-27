@@ -4,13 +4,18 @@
       <img :src="handleImages('/src/assets/images/HeaderStore.svg')" alt="OurStore" id="OurStore">
     </header>
     <section>
-      <div class="circle">
+      <!--
+            <div class="circle">
         <div class="circle1"></div>
         <div class="circle2"></div>
         <div class="circle3"></div>
       </div>
+      -->
       <div id="gridSection">
-        <h1><span class="gradient">Best</span> Seller</h1>
+        <h1>
+          <span class="gradient">Best</span> Seller
+        </h1>
+        
         <ul>
           <li class="modelsGrid" v-for="(model, index) in modelOfDogs" :key="index">
             <div class="gridPicture">
@@ -71,7 +76,10 @@ const modelOfDogs = ref([
 }
 
 section {
-  min-height: 100%
+  min-height: 100%;
+  flex-grow: 2;
+  display: flex;
+  align-items: center;
 }
 
 header {
@@ -125,6 +133,7 @@ header {
   align-items: center;
   position: relative;
   height: 100%;
+  gap: 35px;
 }
 
 h1 {
@@ -132,8 +141,6 @@ h1 {
   font-size: 48px;
   font-family: "inter", bold;
   width: 187px;
-  height: 111px;
-  margin-bottom: 45px;
 }
 
 .gradient {
@@ -149,8 +156,9 @@ ul {
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
-  width: 1000px;
-  height: 350px;
+  width: 100%;
+  height: 100%;
+  gap: 30px;
 }
 
 .modelsGrid {
@@ -158,16 +166,13 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  border: 1px solid #F63D3D;
-  border-radius: 10px;
-  width: 211px;
-  height: 184px;
-  margin-right: 36px;
 }
 
 #picture {
   width: 204px;
   height: 180px;
+  border: 1px solid #F63D3D;
+  border-radius: 10px;
 }
 
 #stars {
@@ -188,7 +193,6 @@ h2 {
   font-family: "Inter", Medium;
   font-size: 18px;
   text-align: center;
-  margin: auto;
 }
 
 p {
@@ -204,10 +208,9 @@ p {
     right: -127px;
   }
 }
+
+
 @media screen and (max-width: 1370px) {
-  #OurStore {
-    width: 430px;
-  }
   .circle1 {
     width: 258px;
     height: 258px;
@@ -215,25 +218,6 @@ p {
   }
   .circle3 {
     display: none;
-  }
-  h1 {
-    width: 215px;
-    height: 75px;
-    font-size: 41px;
-    margin-bottom: 10px;
-  }
-  ul {
-    align-items: flex-start;
-    height: 300px;
-    margin-bottom: 0px;
-  }
-  .modelsGrid {
-    width: 170px;
-    height: 170px;
-  }
-  #picture {
-    width: 159px;
-    height: 166px;
   }
 }
 @media screen and (max-width: 1250px) {
@@ -258,18 +242,15 @@ p {
   h1 {
     font-size: 43px;
   }
-  ul {
-    height: 350px;
+  h2 {
+    font-size: 16px;
   }
-
-  .modelsGrid {
-    width: 170px;
-    height: 175px;
+  p {
+    font-size: 14px;
   }
   #picture {
     width: 180px;
     height: 140px;
-    margin-top: 13%;
   }
 }
 @media screen and (max-width: 1045px) {
@@ -299,20 +280,11 @@ p {
   ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
     justify-items: center;
-    height: 520px;
-    width: 0px;
-    margin-bottom: 80px;
-  }
-
-  .modelsGrid {
-    width: 140px;
-    height: 140px;
   }
   #picture {
-    width: 135px;
-    height: 120px;
+    width: 160px;
+    height: 160px;
   }
   #stars {
     width: 90px;
@@ -345,9 +317,6 @@ p {
   }
 }
 @media screen and (max-width: 400px) {
-  .modelsGrid {
-    margin-right: 0px;
-  }
   .circle1 {
     display: none;
   }

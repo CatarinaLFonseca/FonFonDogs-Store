@@ -10,10 +10,12 @@
             <a href="/">Contact</a>
         </nav>
         <div id="socialMidia">
-            <h2 class="gradient">Follow on social</h2>
-            <div class="imgGrid">
-                <img src="@/assets/images/IconInsta.svg" alt="icon insta">
-                <img src="@/assets/images/IconFace.svg" alt="icon face">
+            <div class="socialMidiaContainer">
+                <h2 class="gradient">Follow on social</h2>
+                <div class="imgGrid">
+                    <img src="@/assets/images/IconInsta.svg" alt="icon insta">
+                    <img src="@/assets/images/IconFace.svg" alt="icon face">
+                </div>
             </div>
         </div>
     </div>
@@ -23,16 +25,27 @@
     #bodyFooter {
         background-image: linear-gradient(360deg, #040006 -30%, #62005F);
         height: 80px;
-        position: relative;
-        bottom: 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        display: flex;  
         align-items: center;
+        padding-inline: 20px;
     }
 
     #reserved {
-        margin: 0px 10px;
+        width: 100%;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #imgGrid {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
     }
 
     h1 {
@@ -41,14 +54,9 @@
         font-size: 16px;
         font-weight: 300;
     }
-
-    nav {
-        margin: auto;
-    }
     
     a {
         color: #ffff;
-        margin: 41px;
         font-family: "Inter", Regular;
         font-size: 14px;
         font-weight: 300;
@@ -56,24 +64,26 @@
     }
 
     #socialMidia {
-        margin: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: center;
+    }
+
+    .socialMidiaContainer {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: 6px;
     }
 
     h2 {
         font-family: "Inter", Bold;
         font-size: 14px;
-        margin: 6px;
     }
 
-    .imgGrid {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-    }
 
     .gradient {
         display: inline;
@@ -88,32 +98,19 @@
         font-size: 13px;
     }    
     a {
-        margin: 41px;
         font-size: 12px;
-    }
-    #socialMidia {
-        margin: 0px 20px;
     }
     h2 {
         font-family: "Inter", Bold;
         font-size: 12px;
-        margin: 6px;
-    }
-    img {
-        width: 12px;
-        margin: 0px 2px;
-    }
+    }   
 }
 @media screen and (max-width: 1180px) {
     h1 {
         font-size: 14px;
     }    
     a {
-        margin: 41px;
         font-size: 12px;
-    }
-    h2 {
-        margin: 6px;
     }
 }
 @media screen and (max-width: 906px) {
@@ -121,48 +118,31 @@
         font-size: 12px;
     }
     a {
-        margin: 25px;
-        font-size: 10px;
+         font-size: 10px;
     }
     h2 {
         font-size: 11px;
-        margin: 5px;
     }
-    img {
-        width: 18px;
-    }
-}
-@media screen and (max-width: 700px) {
-    a {
-        margin: 15px;
+
+    #socialMidia {
+        display: none;
     }
 }
 @media screen and (max-width: 620px) {
     h1 {
         font-size: 11px;
     }
-    a {
-        margin: 13px;
-    }
     h2 {
         font-size: 9px;
     }
-    img {
-        width: 15px;
-    }
 }
+
 @media screen and (max-width: 570px) {
     h1 {
         font-size: 10px;
     }
-    a {
-        margin: 5px;
-    }
     h2 {
         font-size: 8px;
-    }
-    img {
-        width: 14px;
     }
 }
 @media screen and (max-width: 490px) {
