@@ -1,7 +1,7 @@
 <template>
   <div id="bodyTwo">
     <header>
-      <img :src="handleImages('/src/assets/images/HeaderStore.svg')" alt="OurStore" id="OurStore">
+      <img :src="'/images/HeaderStore.svg'" alt="OurStore" id="OurStore">
     </header>
     <section>
       <!--
@@ -19,8 +19,8 @@
         <ul>
           <li class="modelsGrid" v-for="(model, index) in modelOfDogs" :key="index">
             <div class="gridPicture">
-              <img :src="handleImages(`/src/assets/images/${model.picture}`)" alt="picture dog" id="picture">
-              <img :src="handleImages(`/src/assets/images/${model.stars}`)" alt="stars picture" id="stars">
+              <img :src="`/images/${model.picture}`" alt="picture dog" id="picture">
+              <img :src="`/images/${model.stars}`" alt="stars picture" id="stars">
             </div>
               <h2>{{ model.description }}</h2>
               <p>{{ model.price }}</p>
@@ -35,7 +35,6 @@
 <script setup>
 import { ref } from 'vue';
 import ButtonGradient from './ButtonGradient.vue';
-import { handleImages } from '@/utils';
 
 const modelOfDogs = ref([
    {

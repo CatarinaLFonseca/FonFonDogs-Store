@@ -2,7 +2,7 @@
     <div id="bodyOne">
         <header>
             <div class="content-logo">
-                <img :src="new URL('/src/assets/images/Logo.svg', import.meta.url).href" alt="logo"> src\assets\images\Logo.svg
+                <img :src="'/images/Logo.svg'" alt="logo">
             </div>
             <nav>
                 <a href="">Home</a>
@@ -27,7 +27,7 @@
             </div>
 
             <div class="sectionRight">
-                <img :src="handleImages('/src/assets/images/image-right.svg')" alt="Group Dogs">
+                <img :src="'/images/image-right.svg'" alt="Group Dogs">
             </div>
         </section>
     </div>
@@ -36,7 +36,6 @@
 <script setup>
 import ButtonGradient from './ButtonGradient.vue';
 import ButtonLink from './ButtonLink.vue';
-import { handleImages } from '@/utils';
 </script>
 
 <style scoped>
